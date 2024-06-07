@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "388646949213",
+    "project_id": "mirhatlising-de6b2",
+    "storage_bucket": "mirhatlising-de6b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388646949213:android:5ce99580e2aa767c0c18b4",
+        "android_client_info": {
+          "package_name": "com.example.mirhatlising"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSyQa_MLd7wXAJ6sRbmM0y9B0vX2986Wo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

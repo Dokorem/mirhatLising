@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mainPages.callsHistory.UserCallsFragment"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="20dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="50dp"
+        android:gravity="center_vertical"
+
+        >
+
+        <ImageButton
+            android:id="@+id/backToProfilePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="?attr/homeAsUpIndicator"
+            android:background="@android:color/transparent"
+            app:tint="@color/blueAppColor"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/blueAppColor"
+            android:textSize="16sp"
+            android:fontFamily="@font/ubuntu"
+            android:text="Список звонков"
+            />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userCallsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="20dp"
+        />
+
+</LinearLayout>

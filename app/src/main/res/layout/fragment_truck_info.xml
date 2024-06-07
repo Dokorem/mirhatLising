@@ -1,0 +1,1440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".mainPages.TruckInfoFragment"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        >
+
+        <!--  Хэдер  -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="530dp"
+            android:background="@drawable/bottom_round_borders"
+            android:clipToOutline="true"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/road_image_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Mirhat Lising"
+                android:textColor="@color/blueAppColor"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="130dp"
+                android:background="@drawable/round_borders"
+                android:backgroundTint="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:gravity="center"
+                    android:text="Получите стоимость доставки вашего груза"
+                    android:textColor="@color/blueAppColor"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    />
+
+                <Spinner
+                    android:id="@+id/truckSpinnerTypeOfTruck"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/input_style"
+                    android:layout_marginTop="20dp"
+                    android:entries="@array/typesOfTrucks"
+                    />
+
+                <EditText
+                    android:id="@+id/truckUsernameInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input_style"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:hint="Введите свое имя"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/truckNumberInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input_style"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:hint="Введите номер телефона"
+                    android:inputType="phone"
+                    android:maxLength="18"
+                    android:padding="5dp"
+                    android:textSize="14sp"
+
+                    />
+
+                <Button
+                    android:id="@+id/truckFirstInfoButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/little_round_borders"
+                    android:backgroundTint="@color/blueAppColor"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:text="Получить стоимость"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--  Мы специалисты по перезвозке  -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu"
+                android:gravity="center"
+                android:text="Мы специалисты по перевозке"
+                android:textColor="@color/blueAppColor"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/round_borders"
+                    android:clipToOutline="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/truck_image1" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:paddingLeft="10dp"
+                    android:text="Сборные грузы"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/round_borders"
+                    android:clipToOutline="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/truck_image2" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:paddingLeft="10dp"
+                    android:text="Таможенные грузы"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/round_borders"
+                    android:clipToOutline="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/truck_image3" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:paddingLeft="10dp"
+                    android:text="Полные фуры"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/round_borders"
+                    android:clipToOutline="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/truck_image4" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:paddingLeft="10dp"
+                    android:text="Опасные грузы"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/round_borders"
+                    android:clipToOutline="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/truck_image5" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:paddingLeft="10dp"
+                    android:text="Перевозка контейнеров"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--  О нас  -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/top_rounded_borders"
+            android:clipToOutline="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="#20000000"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/road_image_1" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:gravity="center"
+                android:text="О нас"
+                android:textColor="@color/blueAppColor"
+                android:textSize="60sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp">
+
+                <TextView
+                    android:id="@+id/truckYears"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:paddingVertical="-10dp"
+                    android:text="7"
+                    android:textColor="@color/blueAppColor"
+                    android:textSize="80sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/truckYears"
+                    android:layout_alignBottom="@id/truckYears"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="лет на рынке"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp">
+
+                <TextView
+                    android:id="@+id/truckManagersCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:paddingVertical="-10dp"
+                    android:text="25"
+                    android:textColor="@color/blueAppColor"
+                    android:textSize="80sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/truckManagersCount"
+                    android:layout_alignBottom="@id/truckManagersCount"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="менеджеров в команде"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp">
+
+                <TextView
+                    android:id="@+id/truckTechnicCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:paddingVertical="-10dp"
+                    android:text="35"
+                    android:textColor="@color/blueAppColor"
+                    android:textSize="80sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/truckTechnicCount"
+                    android:layout_alignBottom="@id/truckTechnicCount"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="единиц техники в автопарке"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp">
+
+                <TextView
+                    android:id="@+id/truckTonnsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:paddingVertical="-10dp"
+                    android:text="600"
+                    android:textColor="@color/blueAppColor"
+                    android:textSize="80sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/truckTonnsCount"
+                    android:layout_alignBottom="@id/truckTonnsCount"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="тонн груза отправляется ежемесячно"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--  Дополнительный услуги  -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/strong_round_borders"
+            android:backgroundTint="#f1f1f1"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu"
+                android:text="Дополнительные услуги"
+                android:textColor="@color/blueAppColor"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:paddingLeft="-10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/vector1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Погрузка и разгрука"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:paddingLeft="-10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/vector2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Сортировка"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:paddingLeft="-10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/vector3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Хранение на складе"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:paddingLeft="-10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/vector4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Упаковка"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:paddingLeft="-10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/vector5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Страхование"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:paddingLeft="-10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/vector6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Отслеживание"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:paddingLeft="-10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/vector7" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Доставка до двери"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:paddingLeft="-10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/vector8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Декларирование грузов"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/loader" />
+
+        </LinearLayout>
+
+        <!--  Наши преимущества  -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu"
+                android:text="Наши преимущества"
+                android:textColor="@color/blueAppColor"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/ubuntu"
+                android:text="Комфорт"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:src="@drawable/checkbox_with_check_mark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Свой автопарк"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/checkbox_with_check_mark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Работаем без выходных"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/checkbox_with_check_mark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Персональный менеджер на связи 24/7"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/checkbox_with_check_mark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Свои склады временного хранения"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/checkbox_with_check_mark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Ежедневная отправка грузов"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/checkbox_with_check_mark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Удобная для вас форма оплаты"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/checkbox_with_check_mark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Удобная для вас форма оплаты"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/ubuntu"
+                android:text="Безопасность груза"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/checkbox_with_check_mark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Отслеживание с помощью GPS"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/checkbox_with_check_mark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Свои аккуратные грузчики"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/checkbox_with_check_mark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Имеется возможность запломбировать и опечатать кузов"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/ubuntu"
+                android:text="Документы"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/checkbox_with_check_mark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Консультация по документации"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/checkbox_with_check_mark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="Предоставляем бухгалтерские документы"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--  Как мы работаем  -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu"
+                android:text="Как мы работаем"
+                android:textColor="@color/blueAppColor"
+                android:textSize="32sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_borders_with_stroke"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="1"
+                    android:textColor="@color/blueAppColor"
+                    android:textSize="80sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu"
+                        android:text="Заявка"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/ubuntu"
+                        android:text="Вы оставляете заявку, пишете нам на Whatsapp или звоните"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_borders_with_stroke"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="2"
+                    android:textColor="@color/blueAppColor"
+                    android:textSize="80sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu"
+                        android:text="Расчет"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/ubuntu"
+                        android:text="Мы перезваниваем и консультируем вас по стоимости и срокам"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_borders_with_stroke"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="3"
+                    android:textColor="@color/blueAppColor"
+                    android:textSize="80sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu"
+                        android:text="Договор"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/ubuntu"
+                        android:text="Подписываем договор на перевозку"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/strong_round_borders"
+                android:backgroundTint="#f1f1f1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu"
+                        android:text="4"
+                        android:textColor="@color/blueAppColor"
+                        android:textSize="80sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu"
+                        android:text="Получение груза"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/ubuntu"
+                        android:text="Доставляем груз в сохранности и в оговоренный срок"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/box" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/truckInfoDownloadBidFile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/little_round_borders"
+                android:backgroundTint="@color/blueAppColor"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ubuntu_light"
+                android:layout_marginTop="20dp"
+                android:textAllCaps="false"
+                android:text="Форма заявки"
+                />
+
+            <Button
+                android:id="@+id/truckInfoDownloadPriceListFile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/little_round_borders"
+                android:backgroundTint="@color/blueAppColor"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ubuntu_light"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:text="Прайс лист"
+                />
+
+        </LinearLayout>
+
+        <!--  Остались вопросы?  -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/strong_round_borders"
+            android:backgroundTint="@color/blueAppColor"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu"
+                android:text="Остались вопросы?"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:text="Оставьте заявку и наш менеджер свяжется с вами в ближайшее время, чтобы ответить на все ваши вопросы"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/loading_the_truck" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/truckQuestionSpinnerTypeOfTruck"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/round_borders_with_white_stroke"
+                    android:layout_marginTop="20dp"
+                    android:entries="@array/typesOfTrucks"
+                    />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/truckQuestionUsernameInputField"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_borders_with_white_stroke"
+                android:fontFamily="@font/ubuntu_light"
+                android:hint="Введите свое имя"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                />
+
+
+            <EditText
+                android:id="@+id/truckQuestionNumberInputField"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_borders_with_white_stroke"
+                android:fontFamily="@font/ubuntu_light"
+                android:hint="Введите номер телефона"
+                android:inputType="phone"
+                android:maxLength="18"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                />
+
+            <Button
+                android:id="@+id/truckQuestionInfoButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/little_round_borders"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/ubuntu_light"
+                android:text="Получить стоимость"
+                android:textAllCaps="false"
+                android:textColor="@color/blueAppColor"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+        <!--  Футер  -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:textColor="@color/blueAppColor"
+                android:text="Контакты"
+                android:fontFamily="@font/ubuntu"
+                />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="Телефон"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/ubuntu"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:textColor="@color/blueAppColor"
+                android:text="+7 (777) 543-12-28"
+                android:fontFamily="@font/ubuntu"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="Почта"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ubuntu"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:textColor="@color/blueAppColor"
+                android:text="info@mirhatlising.kz"
+                android:fontFamily="@font/ubuntu"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Адрес офиса: г. Кокшетау, ул. Жумабека Ташенова 115"
+                android:fontFamily="@font/ubuntu"
+                android:layout_marginTop="20dp"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToOutline="true"
+                android:background="@drawable/round_borders"
+                android:layout_marginTop="10dp"
+                android:elevation="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:src="@drawable/map_image"
+                    android:scaleType="centerCrop"
+                    />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                >
+                
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/telegram_icon"
+                    android:scaleType="centerCrop"
+                    />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="46dp"
+                    android:src="@drawable/whatsapp_icon"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

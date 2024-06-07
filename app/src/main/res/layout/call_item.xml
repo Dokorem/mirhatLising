@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/little_round_borders"
+    android:backgroundTint="@color/blueAppColor"
+    android:padding="10dp"
+    >
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/call"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        >
+
+        <TextView
+            android:id="@+id/callItemNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:fontFamily="@font/ubuntu"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="8 (700) 987-37-23"
+            />
+
+        <TextView
+            android:id="@+id/callItemDateOfCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="@font/ubuntu"
+            android:text="22.08.2024 16:58"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/lightBlueColor"
+            />
+
+        <TextView
+            android:id="@+id/callItemTypeOfTruck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:gravity="end"
+            android:textColor="@color/white"
+            android:text="Тип: Сборные грузы"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

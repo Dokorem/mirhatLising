@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".enterPages.LoginActivity"
+    android:paddingHorizontal="20dp"
+    >
+
+    <ImageView
+        android:id="@+id/loginPageImage"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/mobile_login"
+        />
+
+    <TextView
+        android:id="@+id/loginPageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="Войти"
+        android:textColor="@color/black"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/loginPageImage"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/ubuntu_light"
+        />
+
+    <LinearLayout
+        android:id="@+id/loginEmailInputHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginPageTitle"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/mail"
+            android:alpha=".4"
+            android:padding="5dp"
+            />
+
+        <EditText
+            android:id="@+id/loginEmailInputField"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Почта"
+            android:fontFamily="@font/ubuntu_light"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loginPasswordInputHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginEmailInputHolder"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/lock"
+            android:alpha=".4"
+            android:padding="5dp"
+            />
+
+        <EditText
+            android:id="@+id/loginPasswordInputField"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Пароль"
+            android:fontFamily="@font/ubuntu_light"
+            android:inputType="textPassword"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loginPageLoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/loginPageRegistrationTextHolder"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/little_round_borders"
+        android:backgroundTint="@color/blueAppColor"
+        android:textColor="@color/white"
+        android:text="Войти"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:fontFamily="@font/ubuntu_light"
+        />
+
+    <LinearLayout
+        android:id="@+id/loginPageRegistrationTextHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="25dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="Ещё нет аккаунта?"
+            android:fontFamily="@font/ubuntu_light"
+            />
+
+        <Button
+            android:id="@+id/goToRegistration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blueAppColor"
+            android:textSize="16sp"
+            android:text=" Зарегистрироваться"
+            android:alpha=".6"
+            android:fontFamily="@font/ubuntu_light"
+            android:focusable="true"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
